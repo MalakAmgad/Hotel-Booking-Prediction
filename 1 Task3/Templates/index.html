@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-image"></div>
+    <div class="container">
+        <h1>Welcome to Our Hotel</h1>
+        <h2>Predict Booking Status</h2>
+        <form action="/predict" method="POST">
+            <div class="row">
+                <label for="number_of_adults">Adults:</label>
+                <input type="number" id="number_of_adults" name="number_of_adults" required>
+            </div>
+
+            <div class="row">
+                <label for="number_of_weekend_nights">Weekend Nights:</label>
+                <input type="number" id="number_of_weekend_nights" name="number_of_weekend_nights" required>
+            </div>
+
+            <div class="row">
+                <label for="number_of_week_nights">Week Nights:</label>
+                <input type="number" id="number_of_week_nights" name="number_of_week_nights" required>
+            </div>
+
+            <div class="row">
+                <label for="car_parking_space">Car Parking Space:</label>
+                <input type="number" id="car_parking_space" name="car_parking_space" min="0" max="1" required>
+            </div>
+
+            <div class="row">
+                <label for="room_type">Room Type:</label>
+                <input type="number" id="room_type" name="room_type" required>
+            </div>
+
+            <div class="row">
+                <label for="lead_time">Lead Time (days):</label>
+                <input type="number" id="lead_time" name="lead_time" required>
+            </div>
+
+            <div class="row">
+                <label for="average_price">Price:</label>
+                <input type="number" id="average_price" name="average_price" step="0.01" required>
+            </div>
+
+            <div class="row">
+                <label for="special_requests">Special Requests:</label>
+                <input type="number" id="special_requests" name="special_requests" required>
+            </div>
+
+            <div class="row">
+                <label for="month">Month :</label>
+                <input type="number" id="month" name="month" min="1" max="12" required>
+            </div>
+
+            <div class="row">
+                <label for="day">Day :</label>
+                <input type="number" id="day" name="day" min="1" max="31" required>
+            </div>
+
+            <div class="row">
+                <label for="type_of_meal_Meal_Plan_2">Meal Plan 2 Selected :</label>
+                <input type="number" id="type_of_meal_Meal_Plan_2" name="type_of_meal_Meal_Plan_2" min="0" max="1" required>
+            </div>
+
+            <div class="row">
+                <label for="type_of_meal_Not_Selected">Not Selected Meal:</label>
+                <input type="number" id="type_of_meal_Not_Selected" name="type_of_meal_Not_Selected" min="0" max="1" required>
+            </div>
+
+            <div class="row">
+                <label for="market_segment_type_Offline"> Offline Market:</label>
+                <input type="number" id="market_segment_type_Offline" name="market_segment_type_Offline" min="0" max="1" required>
+            </div>
+
+            <div class="row">
+                <label for="market_segment_type_Online">Online Market:</label>
+                <input type="number" id="market_segment_type_Online" name="market_segment_type_Online" min="0" max="1" required>
+            </div>
+
+            <div class="row">
+                <label for="year">Year:</label>
+                <input type="number" id="year" name="year" required>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_available %}
+            <div class="result">
+                <h3>
+                    {% if prediction_text == 1 %}
+                        Booking Status: Canceled
+                    {% else %}
+                        Booking Status: Not Canceled
+                    {% endif %}
+                </h3>
+            </div>
+        {% endif %}
+
+    </div>
+</body>
+</html>

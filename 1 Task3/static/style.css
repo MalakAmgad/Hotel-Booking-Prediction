@@ -1,0 +1,76 @@
+/* Background Image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('allphoto-bangkok-P1yhKnirSHs-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+/* Center the container */
+.container {
+    max-width: 700px;
+    margin: 100px auto; /* centers the container horizontally and adds some space from the top */
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* spaces the form elements horizontally */
+}
+
+.row {
+    display: flex;
+    flex-basis: 48%; /* two elements per row with some gap */
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+    flex-basis: 50%; /* makes the label take less space */
+    text-align: right;
+    font-weight: bold;
+}
+
+input {
+    flex-basis: 55%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Button styling */
+button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+    .row {
+        flex-basis: 100%; /* single column for small screens */
+    }
+}
