@@ -87,7 +87,7 @@ python app.py
 Access the application locally at `http://127.0.0.1:5000`.
 
 ## UI
-![here](https://docs.google.com/spreadsheets/d/1U0yXpYDtObVtduA4XIS-rDwk9U4rnhad7hXUabpVLfY/edit?usp=sharing).
+![UI](https://github.com/MalakAmgad/Hotel-Booking-Prediction/blob/main/Screenshot%20(844).png).
 ## Contributors
 
 - [Malak Amgad](www.linkedin.com/in/malak-amgad-9a6892261) - AI Engineer, Developer
